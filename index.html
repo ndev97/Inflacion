@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Inflacion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <div class="resultado">
+        <p class="titulo">Proyectar a inflacion anual</p>
+        <!-- <p>50%</p> -->
+    </div>
+    <header>
+        <h3>Seleccioná el período de tiempo a calcular y despues ingresá solo el numero en los meses para calcular.</h3>
+    </header>
+
+    <main class="container">
+        <div class="switcher-cont">
+            <select class="switcher" id="list">
+                <option value="monthly">Mensual</option>
+                <option value="bimester">Bimestre</option>
+                <option value="trimester">Trimestre</option>
+                <option value="quarter">Cuatrimestre</option>
+                <option value="semester">Semestre</option>
+            </select>
+        </div>
+
+        <div class="input-cont">
+            <input type="text" class="input" placeholder="Inflacion del primer mes" id="month1">
+            <input type="text" class="input" placeholder="Inflacion del segundo mes" id="month2">
+            <input type="text" class="input" placeholder="Inflacion del tercer mes" id="month3">
+            <input type="text" class="input" placeholder="Inflacion del cuarto mes" id="month4">
+            <input type="text" class="input" placeholder="Inflacion del quinto mes" id="month5">
+            <input type="text" class="input" placeholder="Inflacion del sexto mes" id="month6">
+
+            <div class="btn-box">
+                <button class="btn-calculate" id="btn-calculate">Calcular mensual</button>
+            </div>
+        </div>
+    </main>
+
+
+
+    <div class="resultado">
+        <p class="titulo">Calcular inflación acumulada</p>
+    </div>
+    <h3>Ingresa cual fue la inflación de cada mes y al Calcular se mostrará la inflacion acumulada de los datos obtenidos.</h3>    
+
+    <div class="input-cont-acum">
+        <div class="meses-cont">
+            <div class="meses-acum">
+                <input type="text" class="input-acum" placeholder="Inflacion del 1° mes" id="m1">
+                <input type="text" class="input-acum" placeholder="Inflacion del 2° mes" id="m2">
+                <input type="text" class="input-acum" placeholder="Inflacion del 3° mes" id="m3">
+                <input type="text" class="input-acum" placeholder="Inflacion del 4° mes" id="m4">
+            </div>
+            <div class="meses-acum">
+                <input type="text" class="input-acum" placeholder="Inflacion del 5° mes" id="m5">
+                <input type="text" class="input-acum" placeholder="Inflacion del 6° mes" id="m6">
+                <input type="text" class="input-acum" placeholder="Inflacion del 7° mes" id="m7">
+                <input type="text" class="input-acum" placeholder="Inflacion del 8° mes" id="m8">
+            </div>
+            <div class="meses-acum">
+                <input type="text" class="input-acum" placeholder="Inflacion del 9° mes" id="m9">
+                <input type="text" class="input-acum" placeholder="Inflacion del 10° mes" id="m10">
+                <input type="text" class="input-acum" placeholder="Inflacion del 11° mes" id="m11">
+                <input type="text" class="input-acum" placeholder="Inflacion del 12° mes" id="m12">
+            </div>
+        </div>
+
+        <div class="box-acum">
+            <button class="btn-calculate-acum" id="btn-calculate-acum">Calcular inflación acumulada</button>
+
+            
+            <div class="cont-input-res">
+                <p>Inflación acumulada:</p>
+                <input type="text" class="input" id="input-acum-res" placeholder="0%">
+            </div>
+        </div>
+        
+    </div>
+        
+
+    <footer>
+        <p>:Nicolás Cerdán</p>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
