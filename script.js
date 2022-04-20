@@ -160,7 +160,7 @@ btnAcum.addEventListener("click", ()=>{
     }
     for (let i=0; i<inputs.length; i++) {
         if(isNaN(array[i])){
-            return alert("Solo nums y puntos");
+            return alert("Solo numeros y puntos");
         }
     }
 
