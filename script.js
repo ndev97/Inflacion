@@ -19,7 +19,7 @@ btnCalc.addEventListener("click", ()=>{
         if(ipc == ""){
             return alert("Falta informacion del primer mes");
         } else if(isNaN(ipc)){
-            return alert("Solo numeros");
+            return alert("Solo numeros y puntos");
         }
         anualProyected = ((((1+(ipc /100)) **12) -1) *100);
         alert(`Inflacion mensual proyectada: ${anualProyected.toFixed(2)}%`);
@@ -37,7 +37,7 @@ btnCalc.addEventListener("click", ()=>{
             return alert("Falta informacion del segundo mes");
         }
         if(isNaN(ipc1) || isNaN(ipc2)){
-            return alert("Solo numeros");
+            return alert("Solo numeros y puntos");
         }
         anualProyected1 = ((((1+(ipc1 /100)) **12) -1) *100);
         anualProyected2 = ((((1+(ipc2 /100)) **12) -1) *100);
@@ -61,7 +61,7 @@ btnCalc.addEventListener("click", ()=>{
             return alert("Falta informacion del tercer mes");
         }
         if(isNaN(ipc1) || isNaN(ipc2) || isNaN(ipc3)){
-            return alert("Solo numeros");
+            return alert("Solo numeros y puntos");
         }
         anualProyected1 = ((((1+(ipc1 /100)) **12) -1) *100);
         anualProyected2 = ((((1+(ipc2 /100)) **12) -1) *100);
@@ -90,7 +90,7 @@ btnCalc.addEventListener("click", ()=>{
             return alert("Falta informacion del cuarto mes");
         } 
         if(isNaN(ipc1) || isNaN(ipc2) || isNaN(ipc3) || isNaN(ipc4)){
-            return alert("Solo numeros");
+            return alert("Solo numeros y puntos");
         }
         anualProyected1 = ((((1+(ipc1 /100)) **12) -1) *100);
         anualProyected2 = ((((1+(ipc2 /100)) **12) -1) *100);
@@ -128,7 +128,7 @@ btnCalc.addEventListener("click", ()=>{
             return alert("Falta informacion del cuarto mes");
         } 
         if(isNaN(ipc1)||isNaN(ipc2)||isNaN(ipc3)||isNaN(ipc4)||isNaN(ipc5)||isNaN(ipc6)){
-            return alert("Solo numeros");
+            return alert("Solo numeros y puntos");
         }
         anualProyected1 = ((((1+(ipc1 /100)) **12) -1) *100);
         anualProyected2 = ((((1+(ipc2 /100)) **12) -1) *100);
@@ -157,6 +157,11 @@ btnAcum.addEventListener("click", ()=>{
         }
         array[i] = ((array[i] /100)+1);
         accumulated *= array[i];
+    }
+    for (let i=0; i<inputs.length; i++) {
+        if(isNaN(array[i])){
+            return alert("Solo nums y puntos");
+        }
     }
 
     finalResult = (accumulated - 1) *100;
