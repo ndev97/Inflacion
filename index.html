@@ -21,7 +21,8 @@
 
     <main class="container">
         <div class="switcher-cont">
-            <select class="switcher" id="list">
+            <select class="switcher" id="list" >
+                <option value="">Seleccionar período</option>
                 <option value="monthly">Mensual</option>
                 <option value="bimester">Bimestre</option>
                 <option value="trimester">Trimestre</option>
@@ -30,19 +31,27 @@
             </select>
         </div>
 
-        <div class="input-cont">
-            <input type="text" class="input" placeholder="Inflacion del primer mes" id="month1">
-            <input type="text" class="input" placeholder="Inflacion del segundo mes" id="month2">
-            <input type="text" class="input" placeholder="Inflacion del tercer mes" id="month3">
-            <input type="text" class="input" placeholder="Inflacion del cuarto mes" id="month4">
-            <input type="text" class="input" placeholder="Inflacion del quinto mes" id="month5">
-            <input type="text" class="input" placeholder="Inflacion del sexto mes" id="month6">
-
+        <div class="cont">
+            <div class="input-cont">
+                <!-- <input type="text" class="input" placeholder="Inflacion del 1° mes" id="month1"> -->
+                <!-- <input type="text" class="input" placeholder="Inflacion del segundo mes" id="month2">
+                <input type="text" class="input" placeholder="Inflacion del tercer mes" id="month3">
+                <input type="text" class="input" placeholder="Inflacion del cuarto mes" id="month4">
+                <input type="text" class="input" placeholder="Inflacion del quinto mes" id="month5">
+                <input type="text" class="input" placeholder="Inflacion del sexto mes" id="month6"> -->
+            </div>
+    
             <div class="btn-box">
                 <button class="btn-calculate" id="btn-calculate">Proyectar anualmente</button>
             </div>
         </div>
+
     </main>
+
+
+
+
+
 
 
 
@@ -79,7 +88,7 @@
             
             <div class="cont-input-res">
                 <p>Inflación acumulada:</p>
-                <input type="text" class="input" id="input-acum-res" placeholder="0%">
+                <input type="text" class="input-acum" id="input-acum-res" placeholder="0%">
             </div>
         </div>
         

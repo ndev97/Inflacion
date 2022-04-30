@@ -1,3 +1,84 @@
+let list = document.getElementById("list");
+list.addEventListener("change", (e)=>{
+    let periodInterval = document.getElementById("list");
+    let interval = periodInterval.value;
+    let inputContainer = document.querySelector(".input-cont");
+
+    if(interval == ""){
+        let inputs = document.querySelectorAll(".input");
+        for (let element of inputs) {
+            element.remove()
+        }
+    }
+
+    if(interval == "monthly"){
+        let inputs = document.querySelectorAll(".input");
+        for (let element of inputs) {
+            element.remove()
+        }
+        for (let i=0; i<=0; i++) {
+            let newInput = document.createElement("input");
+            newInput.classList.add("input");
+            newInput.setAttribute("placeholder", `Inflacion del ${[i+1]}° mes`);
+            newInput.setAttribute("id", `month${[i+1]}`);
+            inputContainer.appendChild(newInput);
+        }
+    }
+    if(interval == "bimester"){
+        let inputs = document.querySelectorAll(".input");
+        for (let element of inputs) {
+            element.remove()
+        }
+        for (let i=0; i<2; i++) {
+            let newInput = document.createElement("input");
+            newInput.classList.add("input");
+            newInput.setAttribute("placeholder", `Inflacion del ${[i+1]}° mes`);
+            newInput.setAttribute("id", `month${[i+1]}`);
+            inputContainer.appendChild(newInput);
+        }
+    }
+    if(interval == "trimester"){
+        let inputs = document.querySelectorAll(".input");
+        for (let element of inputs) {
+            element.remove()
+        }
+        for (let i=0; i<3; i++) {
+            let newInput = document.createElement("input");
+            newInput.classList.add("input");
+            newInput.setAttribute("placeholder", `Inflacion del ${[i+1]}° mes`);
+            newInput.setAttribute("id", `month${[i+1]}`);
+            inputContainer.appendChild(newInput);
+        }
+    }
+    if(interval == "quarter"){
+        let inputs = document.querySelectorAll(".input");
+        for (let element of inputs) {
+            element.remove()
+        }
+        for (let i=0; i<4; i++) {
+            let newInput = document.createElement("input");
+            newInput.classList.add("input");
+            newInput.setAttribute("placeholder", `Inflacion del ${[i+1]}° mes`);
+            newInput.setAttribute("id", `month${[i+1]}`);
+            inputContainer.appendChild(newInput);
+        }
+    }
+    if(interval == "semester"){
+        let inputs = document.querySelectorAll(".input");
+        for (let element of inputs) {
+            element.remove()
+        }
+        for (let i=0; i<6; i++) {
+            let newInput = document.createElement("input");
+            newInput.classList.add("input");
+            newInput.setAttribute("placeholder", `Inflacion del ${[i+1]}° mes`);
+            newInput.setAttribute("id", `month${[i+1]}`);
+            inputContainer.appendChild(newInput);
+        }
+    }
+
+})
+
 const btnCalc = document.getElementById("btn-calculate");
 btnCalc.addEventListener("click", ()=>{
     let period = document.getElementById("list").value;
@@ -11,6 +92,12 @@ btnCalc.addEventListener("click", ()=>{
         quarter();
     } else if(period == "semester"){
         semester();
+    } else {
+        noData();
+    }
+
+    function noData(){
+        return alert("Seleccionar un período de tiempo");
     }
 
     function month(){
@@ -166,5 +253,5 @@ btnAcum.addEventListener("click", ()=>{
 
     finalResult = (accumulated - 1) *100;
     document.getElementById("input-acum-res").value = `${finalResult.toFixed(2)}%`;
-})
+});
 
