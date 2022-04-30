@@ -10,7 +10,6 @@ list.addEventListener("change", (e)=>{
             element.remove()
         }
     }
-
     if(interval == "monthly"){
         let inputs = document.querySelectorAll(".input");
         for (let element of inputs) {
