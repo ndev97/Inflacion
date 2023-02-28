@@ -75,8 +75,8 @@ list.addEventListener("change", (e)=>{
             inputContainer.appendChild(newInput);
         }
     }
-
 })
+
 
 const btnCalc = document.getElementById("btn-calculate");
 btnCalc.addEventListener("click", ()=>{
@@ -227,13 +227,17 @@ btnCalc.addEventListener("click", ()=>{
     }
 })
 
+
 const btnAcum = document.getElementById("btn-calculate-acum");
 btnAcum.addEventListener("click", ()=>{
     let inputs = document.querySelectorAll(".input-acum");
     let array = [];
     let accumulated = 1;
     let finalResult;
-    
+
+    if(document.getElementById(`input-acum-res`).value != ``){
+        document.getElementById(`input-acum-res`).value = ``
+    }
     for (let i=0; i<inputs.length; i++) {
         array[i] = inputs[i].value;
     }
@@ -249,7 +253,6 @@ btnAcum.addEventListener("click", ()=>{
             return alert("Solo numeros y puntos");
         }
     }
-
     finalResult = (accumulated - 1) *100;
     document.getElementById("input-acum-res").value = `${finalResult.toFixed(2)}%`;
 });
